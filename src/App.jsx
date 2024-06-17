@@ -68,7 +68,7 @@ function App() {
     setDark(e.currentTarget.checked);
   };
   return (
-    <div className="w-screen h-screen  flex    items-center justify-center  overflow-hidden">
+    <div className="w-screen h-screen  flex    items-start justify-center  overflow-hidden">
       <div className="p-2  w-full md:w-1/2  shadow-slate-900 text-blue-950 dark:text-slate-400 rounded-xl bg-blue-100 dark:bg-gradient-to-t from-slate-900 to-purple-900 py-6 px-3 flex flex-col">
         <div className="w-full mb-4 flex justify-between">
           <h1 className=" font-bold text-3xl  mb-4 ">Weather App</h1>
