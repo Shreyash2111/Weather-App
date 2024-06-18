@@ -12,7 +12,7 @@ function App() {
   const [dark, setDark] = useState(false);
   const fetchData = async (city) => {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=cc0d254882764ab997f174353241106&q=${city}&days=7&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=cc0d254882764ab997f174353241106&q=${city}&days=7&aqi=no&alerts=no`
     );
     if (!res.ok) {
       toast.error("Please type correct city name");
