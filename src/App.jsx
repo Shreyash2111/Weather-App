@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { InfinitySpin } from "react-loader-spinner";
 import Layout from "./components/Layout";
+import Sevenday from "./components/Sevenday";
 import Input from "./components/Input";
 import Themeswitcher from "./components/Themeswitchers";
 function App() {
@@ -68,15 +69,18 @@ function App() {
     setDark(e.currentTarget.checked);
   };
   return (
-    <div className="w-screen h-screen  flex    items-start justify-center  overflow-hidden">
-      <div className="p-2  w-full md:w-1/2  shadow-slate-900 text-blue-950 dark:text-slate-400 rounded-xl bg-blue-100 dark:bg-gradient-to-t from-slate-900 to-purple-900 py-6 px-3 flex flex-col">
+    <div className="w-screen h-screen p-2 flex items-center  justify-center  overflow-hidden">
+      <div className="p-2  w-full md:w-1/2  flex flex-col   shadow-slate-900 text-blue-950 dark:text-slate-400 rounded-xl bg-blue-100 dark:bg-slate-900 py-6 px-3 ">
         <div className="w-full mb-4 flex justify-between">
           <h1 className=" font-bold text-3xl  mb-4 ">Weather App</h1>
           <Themeswitcher onChangeBtn={onChangeBtn} dark={dark} />
         </div>
         <Input city={city} setCity={setCity} submitCity={submitCity} />
         {data ? (
-          <Layout data={data} day={day} />
+          <div>
+            <Layout data={data} day={day} />
+            <Sevenday day={day} />
+          </div>
         ) : (
           <div className="w-full h-96 flex items-center justify-center">
             <InfinitySpin

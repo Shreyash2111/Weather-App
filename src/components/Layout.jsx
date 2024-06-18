@@ -5,10 +5,11 @@ import { IoIosCompass } from "react-icons/io";
 import { FaLongArrowAltUp } from "react-icons/fa";
 import { FaDroplet } from "react-icons/fa6";
 import { FaLongArrowAltDown } from "react-icons/fa";
+import Sevenday from "./Sevenday";
 const Layout = ({ data, day }) => {
   return (
     <div className="w-full">
-      <div className="w-full shadow-lg shadow-slate-500/50 dark:shadow-black/0  bg-white text-blue-950 dark:text-slate-400 dark:bg-gradient-to-t from-slate-900 to-purple-900 rounded-lg p-2  flex flex-col mb-4">
+      <div className="w-full shadow-lg shadow-slate-500/50 dark:shadow-black/0  bg-white text-blue-950 dark:text-slate-400 dark:bg-slate-800 rounded-lg p-2  flex flex-col mb-4">
         <h1 className="text-xl font-bold  mb-5">Current Weather</h1>
         <div className="flex w-full h-full justify-around gap-4  font-semibold p-2 max[360px]:p-0 lg:px-10">
           <div className="flex flex-col gap-6 lg:gap-0 items-start   ">
@@ -62,19 +63,6 @@ const Layout = ({ data, day }) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full shadow-lg shadow-slate-500/50  dark:shadow-black/0 text-blue-950 bg-white dark:bg-gradient-to-t from-slate-900 to-purple-900 rounded-lg p-2 dark:text-slate-400">
-        <h1 className="text-md font-semibold mb-2">Extended Forecast</h1>
-        <ul className="flex justify-between p-2 max[450px]:p-0">
-          {day.map(
-            (m, i) =>
-              i < 7 && (
-                <li key={i}>
-                  <Box day={m} />
-                </li>
-              )
-          )}
-        </ul>
       </div>
     </div>
   );
